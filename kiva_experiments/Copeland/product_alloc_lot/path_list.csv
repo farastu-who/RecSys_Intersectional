@@ -1,0 +1,11 @@
+,Config Number,Config Path,Output Path,recommender_weight
+0,1,/Users/lalitasuwattee/PycharmProjects/scruf_tors_2023/Movies/Copeland/product_alloc_lot/product_alloc_lot1.toml,history_file_copeland_product_movie_1.json,0.01
+1,2,/Users/lalitasuwattee/PycharmProjects/scruf_tors_2023/Movies/Copeland/product_alloc_lot/product_alloc_lot2.toml,history_file_copeland_product_movie_2.json,0.11
+2,3,/Users/lalitasuwattee/PycharmProjects/scruf_tors_2023/Movies/Copeland/product_alloc_lot/product_alloc_lot3.toml,history_file_copeland_product_movie_3.json,0.21000000000000002
+3,4,/Users/lalitasuwattee/PycharmProjects/scruf_tors_2023/Movies/Copeland/product_alloc_lot/product_alloc_lot4.toml,history_file_copeland_product_movie_4.json,0.31000000000000005
+4,5,/Users/lalitasuwattee/PycharmProjects/scruf_tors_2023/Movies/Copeland/product_alloc_lot/product_alloc_lot5.toml,history_file_copeland_product_movie_5.json,0.41000000000000003
+5,6,/Users/lalitasuwattee/PycharmProjects/scruf_tors_2023/Movies/Copeland/product_alloc_lot/product_alloc_lot6.toml,history_file_copeland_product_movie_6.json,0.51
+6,7,/Users/lalitasuwattee/PycharmProjects/scruf_tors_2023/Movies/Copeland/product_alloc_lot/product_alloc_lot7.toml,history_file_copeland_product_movie_7.json,0.6100000000000001
+7,8,/Users/lalitasuwattee/PycharmProjects/scruf_tors_2023/Movies/Copeland/product_alloc_lot/product_alloc_lot8.toml,history_file_copeland_product_movie_8.json,0.7100000000000001
+8,9,/Users/lalitasuwattee/PycharmProjects/scruf_tors_2023/Movies/Copeland/product_alloc_lot/product_alloc_lot9.toml,history_file_copeland_product_movie_9.json,0.81
+9,10,/Users/lalitasuwattee/PycharmProjects/scruf_tors_2023/Movies/Copeland/product_alloc_lot/product_alloc_lot10.toml,history_file_copeland_product_movie_10.json,0.91

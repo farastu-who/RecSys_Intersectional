@@ -1,0 +1,80 @@
+[location]
+path = "../../data"
+overwrite = "true"
+
+[data]
+rec_filename = "recs.csv"
+feature_filename = "items.csv"
+
+[output]
+filename = "history_file_copeland_product_movie_5.json"
+
+[parameters]
+list_size = 10
+iterations = -1
+initialize = "skip"
+history_window_size = 100
+
+[context]
+context_class = "csv_context"
+
+[allocation]
+allocation_class = "product_lottery"
+
+[choice]
+choice_class = "whalrus_scoring"
+
+[post]
+postprocess_class = "exposure"
+
+[context.properties]
+compatibility_file = "compat.csv"
+
+[feature.one]
+name = "women_writer_director"
+protected_feature = "women_writer_director"
+protected_values = [ 1,]
+
+[feature.two]
+name = "non-en"
+protected_feature = "non-en"
+protected_values = [ 1,]
+
+[agent.one]
+name = "women_writer_director"
+metric_class = "proportional_item"
+compatibility_class = "context_compatibility"
+preference_function_class = "cascade_preference"
+
+[agent.two]
+name = "non-en"
+metric_class = "proportional_item"
+compatibility_class = "context_compatibility"
+preference_function_class = "cascade_preference"
+
+[choice.properties]
+whalrus_rule = "RuleCopeland"
+tie_breaker = "Random"
+ignore_weights = false
+recommender_weight = 0.41000000000000003
+
+[post.properties]
+filename = "Copeland_product_movie.csv"
+threshold = "none"
+binary = "false"
+
+[agent.one.metric]
+feature = "women_writer_director"
+proportion = 0.2
+
+[agent.one.preference]
+delta = 0.1
+feature = "women_writer_director"
+
+[agent.two.metric]
+feature = "non-en"
+proportion = 0.2
+
+[agent.two.preference]
+delta = 0.1
+feature = "non-en"

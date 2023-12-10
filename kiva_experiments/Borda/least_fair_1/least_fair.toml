@@ -1,0 +1,103 @@
+[location]
+path = "../../data"
+overwrite = "true"
+
+[data]
+rec_filename = "recs.csv"
+feature_filename = "items.csv"
+
+[output]
+filename = "history_file_borda_least_kiva.json"
+
+[parameters]
+list_size = 10
+iterations = -1
+initialize = "skip"
+history_window_size = 100
+
+[context]
+context_class = "csv_context"
+
+[context.properties]
+compatibility_file = "compat.csv"
+
+[feature]
+
+[feature.one]
+name = "COUNTRY_low_pfr"
+protected_feature = "COUNTRY_low_pfr"
+protected_values = [1]
+
+[feature.two]
+name = "loan_buck_5"
+protected_feature = "loan_buck_5"
+protected_values = [1]
+
+[feature.three]
+name = "ACTIVITY_Agriculture"
+protected_feature = "ACTIVITY_Agriculture"
+protected_values = [1]
+
+[agent]
+
+[agent.one]
+name = "COUNTRY_low_pfr"
+metric_class = "proportional_item"
+compatibility_class = "context_compatibility"
+preference_function_class = "binary_preference"
+
+[agent.one.metric]
+feature = "COUNTRY_low_pfr"
+proportion = 0.3
+
+[agent.one.preference]
+delta = 0.1
+feature = "COUNTRY_low_pfr"
+
+[agent.two]
+name = "loan_buck_5"
+metric_class = "proportional_item"
+compatibility_class = "context_compatibility"
+preference_function_class = "binary_preference"
+
+[agent.two.metric]
+feature = "loan_buck_5"
+proportion = 0.2
+
+[agent.two.preference]
+delta = 0.8
+feature = "loan_buck_5"
+
+[agent.three]
+name = "ACTIVITY_Agriculture"
+metric_class = "proportional_item"
+compatibility_class = "context_compatibility"
+preference_function_class = "binary_preference"
+
+[agent.three.metric]
+feature = "ACTIVITY_Agriculture"
+proportion = 0.05
+
+[agent.three.preference]
+delta = 0.3
+feature = "ACTIVITY_Agriculture"
+
+
+[allocation]
+allocation_class = "least_fair"
+
+[choice]
+choice_class = "whalrus_scoring"
+[choice.properties]
+whalrus_rule = "RuleBorda"
+tie_breaker = "Random"
+ignore_weights = false
+recommender_weight = 0.5
+
+[post]
+postprocess_class = "exposure"
+
+[post.properties]
+filename = "Borda_least_kiva_1.csv"
+threshold = "none"
+binary = "false"

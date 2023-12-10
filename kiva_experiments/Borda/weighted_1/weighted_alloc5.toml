@@ -1,0 +1,84 @@
+[location]
+path = "../../data"
+overwrite = "true"
+
+[data]
+rec_filename = "recs_1.csv"
+feature_filename = "items.csv"
+
+[output]
+filename = "history_file_borda_weighted_kiva_1_5.json"
+
+[parameters]
+list_size = 10
+iterations = -1
+initialize = "skip"
+history_window_size = 100
+
+[context]
+context_class = "csv_context"
+
+[allocation]
+allocation_class = "weighted_product_allocation"
+
+[choice]
+choice_class = "whalrus_scoring"
+
+[post]
+postprocess_class = "exposure"
+
+[context.properties]
+compatibility_file = "compat.csv"
+
+[feature.one]
+name = "COUNTRY_low_pfr"
+protected_feature = "COUNTRY_low_pfr"
+protected_values = [ 1,]
+
+[feature.two]
+name = "loan_buck_5"
+protected_feature = "loan_buck_5"
+protected_values = [ 1,]
+
+[agent.one]
+name = "COUNTRY_low_pfr"
+metric_class = "proportional_item"
+compatibility_class = "context_compatibility"
+preference_function_class = "binary_preference"
+
+[agent.two]
+name = "loan_buck_5"
+metric_class = "proportional_item"
+compatibility_class = "context_compatibility"
+preference_function_class = "binary_preference"
+
+[allocation.properties]
+compatibility_exponent = 2
+fairness_exponent = 1
+
+[choice.properties]
+whalrus_rule = "RuleBorda"
+tie_breaker = "Random"
+ignore_weights = false
+recommender_weight = 0.41000000000000003
+
+[post.properties]
+filename = "Borda_weighted_moive.csv"
+threshold = "none"
+binary = "false"
+
+[agent.one.metric]
+feature = "COUNTRY_low_pfr"
+proportion = 0.3
+
+[agent.one.preference]
+delta = 0.1
+feature = "COUNTRY_low_pfr"
+
+[agent.two.metric]
+feature = "loan_buck_5"
+proportion = 0.2
+
+[agent.two.preference]
+delta = 0.8
+feature = "loan_buck_5"
