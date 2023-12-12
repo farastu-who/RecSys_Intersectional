@@ -17,3 +17,14 @@ This [slide deck](https://docs.google.com/presentation/d/111QYzE0Dft8lYMAyx9mbYf
 4. Intersectional Experiments
 5. Consolidation of Results
 6. Project Report
+
+### Data Details
+1. loan_size
+2. country
+3. gender
+
+### Baseline experiments
+1. 3 different agent allocation
+2. 4 different allocation mechanisms
+3. Graphs - 4 
+4. L1 1/2 norm
